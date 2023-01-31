@@ -1,0 +1,386 @@
+$black: #000
+$pink: #EC7979
+$darkpink: #AB4949
+$lightgrey: #86878B
+$grey: #333
+$darkgrey: #212121
+$white: #fff
+
+*
+  margin: 0
+  padding: 0
+  text-decoration: none
+
+html, body
+  font-family: 'Raleway', sans-serif
+  color: $white
+  width: 100%
+  height: 100%
+
+h1
+  font-size: 48px
+  line-height: 56px
+
+h2
+  font-size: 36px
+  line-height: 42.26px
+
+h3
+  font-size: 30px
+  line-height: 40.85px
+
+h4
+  font-size: 24px
+  line-height: 33px
+
+h5
+  font-size: 18px
+  line-height: 21px
+
+h6
+  font-size: 13px
+  line-height: 18px
+
+//  -------------------------------------------------------------------------------------------------------------------
+.button
+  & a
+    padding: 10px 60px
+    color: $white
+    display: inline-block
+
+.button-white-ouline
+  @extend .button
+  & a
+    border: 3px solid $white
+
+.button-pink
+  @extend .button
+  & a
+    color: $white
+    //background-color: $pink
+    background-color: $pink
+    border: none
+
+.container
+  //max-width: 1170px
+  max-width: 1510px
+  margin: auto
+
+.header
+  height: 76px
+  background-color: $black
+
+.inner-header
+  height: 100%
+  display: flex
+  justify-content: space-between
+  &__menu
+    color: $white
+    width: 570px
+    margin-right: 170px
+    margin-left: 30px
+    & ul
+      list-style: none
+      height: 100%
+      display: flex
+      justify-content: space-between
+      align-items: center
+      &>li
+        &>a
+          padding: 30px 40px
+          color: $white
+          display: block
+          height: 100%
+  &__logo
+    height: 100%
+    margin: 0 0 0 115px
+    display: flex
+    align-items: center
+
+.block1
+  $bgi: url(img/street.jpg)
+  background: url("img/bg.png") no-repeat center, url("img/street.jpg") no-repeat center
+  //background-position-y: -76px
+  background-size: cover
+  height: 1026px
+  &__line
+    border-top: 1px solid white
+    height: 50px
+    margin-top: 50px
+    max-width: 200px
+.inner-block1
+  padding-top: 150px
+  padding-right: 10px
+  padding-left: 10px
+  display: flex
+  justify-content: center
+  align-items: center
+  //height: 100%
+  &__logo > img
+    height: 55px
+  &__content
+    margin-top: 100px
+    & h1
+      text-transform: uppercase
+      font-style: normal
+      font-weight: 500
+      font-size: 48px
+      max-width: 680px
+      margin-top: 70px
+    & p
+      max-width: 350px
+      margin-bottom: 50px
+
+.form
+  width: 470px
+  height: 450px
+  background-color: $white
+  border-radius: 10px
+  padding: 20px 30px 0 30px
+  position: relative
+  & h4
+    font-family: 'Open Sans', sans-serif
+    font-style: normal
+    font-weight: 700
+    font-size: 24px
+    line-height: 33px
+    color: black
+    text-transform: uppercase
+    text-align: center
+    & span
+      color: $pink
+  & form
+    margin-right: 10px
+    padding: 0 20px
+    color: #cccccc
+    & input
+      font-size: 18px
+      width: 100%
+      border: none
+      border-bottom: 1px solid #ccc
+      margin-top: 40px
+      line-height: 50px
+      padding: 0 20px
+      outline: none
+      &::placeholder
+        transform: translateX(-20px)
+        color: #ccc
+      &:focus
+        border: 1px solid #cccccc
+        &::placeholder
+          color: rgba(0,0,0,0)
+  & .button
+    margin-top: 10px
+    & a
+      line-height: 60px
+      text-align: center
+      color: $white
+      font-size: 20px
+      background-color: $pink
+      padding: 10px 0
+      width: 100%
+      border: none
+      border-radius: 0 0 10px 10px
+      position: absolute
+      left: 0
+      bottom: 0
+
+.socials
+  background-color: #F8EFEF
+.inner-socials
+  display: flex
+  justify-content: space-around
+  align-items: center
+  color: $darkgrey
+  padding-left: 50px
+  //padding-right: 50px
+  &__left
+    padding: 0 10px
+    & h4
+      margin-top: 30px
+    & p
+      margin-top: 30px
+      margin-bottom: 30px
+      max-width: 500px
+      color: $lightgrey
+  &__right
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    //width: 60%
+    & a
+      margin: 0 10px
+
+.tabs
+  padding: 100px 200px
+  &__block
+    background-color: $white
+  &__nav
+    display: flex
+    justify-content: start
+    width: 50%
+    cursor: pointer
+  &__item
+    background-color: $white
+    color: $lightgrey
+    text-transform: uppercase
+    font-size: 16px
+    flex: 1
+    text-align: center
+    padding: 10px
+    transform: translateY(2px)
+    border: 2px solid white
+    border-bottom: 2px solid #eaeaea
+    &:hover
+      color: #666666
+  &__isActive
+    background-color: white
+    border: 2px solid #eaeaea
+    border-top-left-radius: 5px
+    border-top-right-radius: 5px
+    border-bottom: white
+  &__content
+    display: none
+    justify-content: space-between
+    color: black
+    border: 2px solid #eaeaea
+    padding-left: 30px
+    align-items: center
+    &.isActive
+      display: flex
+      flex-wrap: wrap
+      min-width: 470px
+
+.slide__text
+  //margin: 0 100px
+  margin-left: 1%
+  width: 50%
+  & h5
+    font-weight: 400
+    margin-top: 50px
+    margin-bottom: 40px
+
+.awesome
+  color: $grey
+  padding: 50px 0
+  box-sizing: border-box
+  margin-bottom: 50px
+  &__up
+    text-align: center
+    margin: auto
+    & h2
+      font-weight: 400
+    & p
+      color: $lightgrey
+      margin-top: 40px
+  &__cards
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+    margin: 50px 0 0 0
+  &__card
+    text-align: center
+    max-width: 300px
+    padding: 0 30px
+    & p
+      margin-top: 50px
+  &__dash
+    border-bottom: 1px solid $pink
+    width: 10%
+    height: 40px
+    margin: auto
+
+.pricing
+  @extend .awesome
+  &__wrapper
+    background-color: #eaeaea
+  &__up
+    @extend .awesome__up
+    & h2
+      font-weight: 400
+    & p
+      color: $lightgrey
+      margin-top: 40px
+  &__cards
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    margin: 50px 0 0 0
+  &__card
+    background-color: $grey
+    flex: 1
+    color: $white
+    text-align: center
+    width: 25%
+    //max-width: 300px
+    margin: 0 20px
+    transition: all 0.3s ease-out
+    cursor: pointer
+    &:hover
+      box-shadow: 8px 8px 15px -3px rgba(0,0,0,0.1), -8px 8px 15px -3px rgba(0,0,0,0.1)
+      transform: translate(0, -10px)
+    & h4
+      margin: 20px 0
+      &:nth-child(2)
+        font-size: 40px
+        padding: 50px 0
+        border-bottom: 2px solid #eaeaea
+        border-top: 2px solid #eaeaea
+    & p
+      margin: 20px 0
+      color: #cccccc
+  &__dash
+    @extend .awesome__dash
+  &__options
+    & p
+      margin: 0
+      background-color: #fff
+      color: $grey
+      padding: 20px 0
+      border-bottom: 1px solid #eaeaea
+
+.review
+  @extend .awesome
+  &__up
+    text-align: center
+    margin: auto
+    & h2
+      font-weight: 400
+    & p
+      color: $lightgrey
+      margin-top: 40px
+  &__cards
+    @extend .awesome__cards
+  &__card
+    text-align: center
+    width: 30%
+    margin: 20px
+    flex: 1
+    & p
+      background-color: #e2e2e2
+      color: $lightgrey
+      border-radius: 10px
+      padding: 40px 20px
+  &__dash
+    border-bottom: 1px solid $pink
+    width: 10%
+    height: 40px
+    margin: auto
+  &__triangle
+    background-color: #e2e2e2
+    width: 30px
+    height: 30px
+    transform: translate(100px, -18px) rotate(45deg)
+  &__person
+    margin-top: 40px
+    text-align: left
+    & img
+      float: left
+      margin-right: 30px
+    & h4
+      display: inline-block
+      margin: 10px 0
+    & p
+      background: none
+      display: inline-block
+      padding: 0
