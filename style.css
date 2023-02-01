@@ -15,34 +15,39 @@ h1 {
   font-size: 48px;
   line-height: 56px;
 }
+
 h2 {
   font-size: 36px;
   line-height: 42.26px;
 }
+
 h3 {
   font-size: 30px;
   line-height: 40.85px;
 }
+
 h4 {
   font-size: 24px;
   line-height: 33px;
 }
+
 h5 {
   font-size: 18px;
   line-height: 21px;
 }
+
 h6 {
   font-size: 13px;
   line-height: 18px;
 }
 
-.button a, .button-pink a, .button-white-ouline a {
+.button a, .button-pink a, .button-white-outline a {
   padding: 10px 60px;
   color: #fff;
   display: inline-block;
 }
 
-.button-white-ouline a {
+.button-white-outline a {
   border: 3px solid #fff;
 }
 
@@ -132,7 +137,7 @@ h6 {
   margin-bottom: 50px;
 }
 
-.form, .contact .contact-form {
+.form {
   width: 470px;
   height: 450px;
   background-color: #fff;
@@ -140,7 +145,7 @@ h6 {
   padding: 20px 30px 0 30px;
   position: relative;
 }
-.form h4, .contact .contact-form h4 {
+.form h4 {
   font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -150,15 +155,15 @@ h6 {
   text-transform: uppercase;
   text-align: center;
 }
-.form h4 span, .contact .contact-form h4 span {
+.form h4 span {
   color: #EC7979;
 }
-.form form, .contact .contact-form form {
+.form form {
   margin-right: 10px;
   padding: 0 20px;
   color: #cccccc;
 }
-.form form input, .contact .contact-form form input {
+.form__input, .contact .contact-form form textarea, .contact .contact-form form input {
   font-size: 18px;
   width: 100%;
   border: none;
@@ -168,20 +173,20 @@ h6 {
   padding: 0 20px;
   outline: none;
 }
-.form form input::placeholder, .contact .contact-form form input::placeholder {
+.form__input::placeholder, .contact .contact-form form textarea::placeholder, .contact .contact-form form input::placeholder {
   transform: translateX(-20px);
   color: #ccc;
 }
-.form form input:focus, .contact .contact-form form input:focus {
+.form__input:focus, .contact .contact-form form textarea:focus, .contact .contact-form form input:focus {
   border: 1px solid #cccccc;
 }
-.form form input:focus::placeholder, .contact .contact-form form input:focus::placeholder {
+.form__input:focus::placeholder, .contact .contact-form form textarea:focus::placeholder, .contact .contact-form form input:focus::placeholder {
   color: rgba(0, 0, 0, 0);
 }
-.form .button, .contact .contact-form .button, .form .button-white-ouline, .contact .contact-form .button-white-ouline, .form .button-pink, .contact .contact-form .button-pink {
+.form .button, .form .button-white-outline, .form .button-pink {
   margin-top: 10px;
 }
-.form .button a, .contact .contact-form .button a, .form .button-white-ouline a, .contact .contact-form .button-white-ouline a, .form .button-pink a, .contact .contact-form .button-pink a {
+.form .button a, .form .button-white-outline a, .form .button-pink a {
   line-height: 60px;
   text-align: center;
   color: #fff;
@@ -317,7 +322,7 @@ h6 {
 .awesome__card p {
   margin-top: 50px;
 }
-.awesome__dash, .pricing__dash {
+.awesome__dash, .contact__dash, .pricing__dash {
   border-bottom: 1px solid #EC7979;
   width: 10%;
   height: 40px;
@@ -434,7 +439,7 @@ h6 {
   margin-bottom: 0;
 }
 .stylish__wrapper {
-  background: url("img/stylish-shadow.png") no-repeat center, url("img/stylish.png") no-repeat center;
+  background: url("img/stylish-shadow.png") no-repeat center, url("img/stylish.png") fixed center;
   background-size: cover;
 }
 .stylish h2 {
@@ -445,7 +450,7 @@ h6 {
   color: #fff;
   margin: 40px auto;
 }
-.stylish > .button-white-ouline a {
+.stylish > .button-white-outline a {
   padding-left: 100px;
   padding-right: 100px;
 }
@@ -473,15 +478,9 @@ h6 {
   color: #333;
   margin: 40px auto;
 }
-.contact > .button-white-ouline a {
+.contact > .button-white-outline a {
   padding-left: 100px;
   padding-right: 100px;
-}
-.contact__dash {
-  border-bottom: 1px solid #EC7979;
-  width: 10%;
-  height: 40px;
-  margin: auto;
 }
 .contact .contact-form form {
   width: 100%;
@@ -490,21 +489,11 @@ h6 {
   flex-wrap: wrap;
   flex-direction: column;
   align-items: start;
+  justify-content: center;
 }
 .contact .contact-form form input {
   width: 700px;
   flex: 1;
-}
-.contact .contact-form form textarea {
-  transform: translateY(10px);
-  font-size: 18px;
-  width: 100%;
-  border: none;
-  border-bottom: 1px solid #ccc;
-  margin-top: 40px;
-  line-height: 50px;
-  padding: 0 20px;
-  outline: none;
 }
 .contact .contact-form form textarea::placeholder {
   transform: translateX(-20px);
@@ -518,7 +507,7 @@ h6 {
 }
 .contact__button {
   box-sizing: border-box;
-  margin: 20px;
+  margin: 40px 0 0 20px;
 }
 .contact__button a {
   display: inline-block;
@@ -528,7 +517,6 @@ h6 {
 }
 
 #message {
-  margin-left: 30px;
   flex: 1;
   width: 630px;
   resize: none;

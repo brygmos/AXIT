@@ -17,25 +17,24 @@ html, body
   width: 100%
   height: 100%
 
-h
-  &1
-    font-size: 48px
-    line-height: 56px
-  &2
-    font-size: 36px
-    line-height: 42.26px
-  &3
-    font-size: 30px
-    line-height: 40.85px
-  &4
-    font-size: 24px
-    line-height: 33px
-  &5
-    font-size: 18px
-    line-height: 21px
-  &6
-    font-size: 13px
-    line-height: 18px
+h1
+  font-size: 48px
+  line-height: 56px
+h2
+  font-size: 36px
+  line-height: 42.26px
+h3
+  font-size: 30px
+  line-height: 40.85px
+h4
+  font-size: 24px
+  line-height: 33px
+h5
+  font-size: 18px
+  line-height: 21px
+h6
+  font-size: 13px
+  line-height: 18px
 
 
 //  -------------------------------------------------------------------------------------------------------------------
@@ -45,7 +44,7 @@ h
     color: $white
     display: inline-block
 
-.button-white-ouline
+.button-white-outline
   @extend .button
   & a
     border: 3px solid $white
@@ -147,22 +146,22 @@ h
     margin-right: 10px
     padding: 0 20px
     color: #cccccc
-    & input
-      font-size: 18px
-      width: 100%
-      border: none
-      border-bottom: 1px solid #ccc
-      margin-top: 40px
-      line-height: 50px
-      padding: 0 20px
-      outline: none
+  &__input
+    font-size: 18px
+    width: 100%
+    border: none
+    border-bottom: 1px solid #ccc
+    margin-top: 40px
+    line-height: 50px
+    padding: 0 20px
+    outline: none
+    &::placeholder
+      transform: translateX(-20px)
+      color: #ccc
+    &:focus
+      border: 1px solid #cccccc
       &::placeholder
-        transform: translateX(-20px)
-        color: #ccc
-      &:focus
-        border: 1px solid #cccccc
-        &::placeholder
-          color: rgba(0,0,0,0)
+        color: rgba(0,0,0,0)
   & .button
     margin-top: 10px
     & a
@@ -384,7 +383,7 @@ h
   color: white
   margin-bottom: 0
   &__wrapper
-    background: url("img/stylish-shadow.png") no-repeat center, url("img/stylish.png") no-repeat center
+    background: url("img/stylish-shadow.png") no-repeat center, url("img/stylish.png") fixed center
     background-size: cover
   & h2
     font-weight: 400
@@ -392,7 +391,7 @@ h
   & p
     color: $white
     margin: 40px auto
-  &>.button-white-ouline a
+  &>.button-white-outline a
     padding-left: 100px
     padding-right: 100px
   &__dash
@@ -415,16 +414,12 @@ h
   & p
     color: $grey
     margin: 40px auto
-  &>.button-white-ouline a
+  &>.button-white-outline a
     padding-left: 100px
     padding-right: 100px
   &__dash
-    border-bottom: 1px solid $pink
-    width: 10%
-    height: 40px
-    margin: auto
+    @extend .awesome__dash
   & .contact-form
-    @extend .form
     & form
       width: 100%
       height: 300px
@@ -432,19 +427,22 @@ h
       flex-wrap: wrap
       flex-direction: column
       align-items: start
+      justify-content: center
       & input
+        @extend .form__input
         width: 700px
         flex: 1
       & textarea
-        transform: translateY(10px)
-        font-size: 18px
-        width: 100%
-        border: none
-        border-bottom: 1px solid #ccc
-        margin-top: 40px
-        line-height: 50px
-        padding: 0 20px
-        outline: none
+        @extend .form__input
+        //transform: translateY(10px)
+        //font-size: 18px
+        //width: 100%
+        //border: none
+        //border-bottom: 1px solid #ccc
+        //margin-top: 40px
+        //line-height: 50px
+        //padding: 0 20px
+        //outline: none
         &::placeholder
           transform: translateX(-20px)
           color: #ccc
@@ -453,19 +451,15 @@ h
           &::placeholder
             color: rgba(0,0,0,0)
   &__button
-    //@extend .button-pink
     box-sizing: border-box
-    margin: 20px
+    margin: 40px 0 0 20px
     & a
-      //border-radius: unset
       display: inline-block
       padding: 20px 70px
       background-color: $pink
       color: white
 
-
 #message
-  margin-left: 30px
   flex: 1
   width: 630px
   resize: none
