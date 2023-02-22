@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
 </head>
 <body>
     <div class="app" style="display: block">
@@ -42,9 +43,9 @@
                     <div class="form">
                         <h4>try Your <span>free</span> trial today</h4>
                         <form action="#">
-                            <label for="name"></label><input class="form__input" type="text" id="name" placeholder="Name">
-                            <label for="email"></label><input class="form__input" type="text" id="email" placeholder="Email">
-                            <label for="password"></label><input class="form__input" type="password" id="password" placeholder="Password">
+                            <label for="nameee"></label><input class="form__input" type="text" id="nameee" placeholder="Name">
+                            <label for="emailll"></label><input class="form__input" type="text" id="emailll" placeholder="Email">
+                            <label for="passworddd"></label><input class="form__input" type="password" id="passworddd" placeholder="Password">
                         </form>
                         <div class="button"><a href="#">Get Started RALEWAY</a></div>
                     </div>
@@ -102,7 +103,7 @@
                         </p>
                         <div class="button button-pink"><a href="#">Raleway</a></div>
                     </div>
-                    <img src="img/liberty.png" alt="liberty statue">
+                    <img src="img/stylish.png" alt="liberty statue">
                 </div>
                 <div class="tab-3 tabs__content">
                     <div class="slide__text">
@@ -273,17 +274,32 @@
                 <div class="contact__dash"></div>
                 <p>Use the sections you need, remove the ones you don't.  Create gorgeous prototypes faster than ever!</p>
                 <div class=" contact-form">
-                    <form action="form-handler.js" method="post">
-                        <label for="nameee"></label><input type="text" id="nameee" placeholder="Name">
-                        <label for="emailll"></label><input type="email" id="emailll" placeholder="Email">
-                        <label for="passworddd"></label><input type="password" id="passworddd" placeholder="Password">
-                        <label for="message"></label><textarea type="text" id="message" placeholder="Message"></textarea>
+                    <form action="sender.php" id="secondForm" method="post">
+                        <label for="name"></label><input type="text" name="name" id="name" placeholder="Name" >
+                        <label for="email"></label><input type="email" name="email" id="email" placeholder="Email" >
+                        <label for="password"></label><input type="password" name="password" id="password" placeholder="Password">
+                        <label for="message"></label><textarea type="text" name="message" id="message" placeholder="Message" ></textarea>
+<!--                        <button type="submit" name="button" value="Send" class="form__btn" style="color: white; border: none">Отправить форму</button>-->
                     </form>
-                    <div class="contact__button"><a href="#" onclick="alert('click');">Send Message</a></div>
+                    <p id="txtHint">Hint</p>
+                    <div class="contact__button" onclick="secondForm.submit()"><a href="#">Send Message</a></div>
                 </div>
             </div>
         </div>
-
+        <div class="footer">
+            <div class="inner-footer container">
+                <div class="inner-footer__content">
+                    <a href="#"><img src="img/socials/github_icon.svg" alt="github"></a>
+                    <a href="#"><img src="img/socials/github_icon.svg" alt="github"></a>
+                    <a href="#"><img src="img/socials/github_icon.svg" alt="github"></a>
+                    <a href="#"><img src="img/socials/github_icon.svg" alt="github"></a>
+                    <a href="#"><img src="img/socials/github_icon.svg" alt="github"></a>
+                    <a href="#"><img src="img/socials/github_icon.svg" alt="github"></a>
+                    <a href="#"><img src="img/socials/github_icon.svg" alt="github"></a>
+                </div>
+                <p class="inner-footer__copyright">© 2015 Axure Themes</p>
+            </div>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>

@@ -86,6 +86,7 @@ h6
           color: $white
           display: block
           height: 100%
+          //background-color: $pink
   &__logo
     height: 100%
     margin: 0 0 0 115px
@@ -131,6 +132,9 @@ h6
   border-radius: 10px
   padding: 20px 30px 0 30px
   position: relative
+  &__btn
+    padding: 20px 50px
+    background-color: $pink
   & h4
     font-family: 'Open Sans', sans-serif
     font-style: normal
@@ -143,12 +147,11 @@ h6
     & span
       color: $pink
   & form
-    margin-right: 10px
-    padding: 0 20px
+    //padding: 0 10px
     color: #cccccc
   &__input
     font-size: 18px
-    width: 100%
+    width: 420px
     border: none
     border-bottom: 1px solid #ccc
     margin-top: 40px
@@ -159,7 +162,9 @@ h6
       transform: translateX(-20px)
       color: #ccc
     &:focus
-      border: 1px solid #cccccc
+      //border: 1px solid #cccccc
+      outline: 1px solid #cccccc
+      border: none
       &::placeholder
         color: rgba(0,0,0,0)
   & .button
@@ -243,6 +248,8 @@ h6
       display: flex
       flex-wrap: wrap
       min-width: 470px
+      & img
+        width: auto
 
 .slide__text
   //margin: 0 100px
@@ -464,3 +471,17 @@ h6
   width: 630px
   resize: none
   transform: translateY(0px)
+
+.footer
+  background-color: $black
+.inner-footer
+  &__content
+    display: flex
+    justify-content: center
+    padding: 30px
+    & a
+      margin: 0 20px
+  &__copyright
+    color: $lightgrey
+    text-align: center
+    padding-bottom: 15px
